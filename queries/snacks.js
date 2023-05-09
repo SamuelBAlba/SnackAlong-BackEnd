@@ -31,9 +31,37 @@ const createSnack = async (snackToAdd) => {
     }
 };
 
+const deleteSnack = async (id) => {
+    try {
+        const deletedSnack = await db.one('DELETE FTOM snacks WHERE id=$1 RETURNING *', id)
+
+        return deletedSnack;
+        
+    } catch (error) {
+        
+    }
+};
+
+const updateSnack = async (id, snack) => {
+
+    try {
+        const updatedSnack = await db.one('UPDATE snacks SET name=$1, type=$2, sugar=$3, protein=$4, fiber=$5, sodium=$6, calories=$7, img=$8 WHERE id=$9 RETURNING *', [snack.name, snack.type, snack.sugar, snack.protein, snack.fiber, snack.sodium, snack.calories, snack.img, id])
+
+        return updatedSnack
+        
+    } catch (error) {
+        return error;
+        
+    }
+
+} 
+
 
 
 module.exports = {
     getAllSnacks,
-    getASnack
+    getASnack,
+    createSnack,
+    deleteSnack,
+    updateSnack
 }
