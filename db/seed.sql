@@ -9,3 +9,6 @@ INSERT INTO snacks (name, type, sugar, protein, fiber, sodium, calories, img) VA
 ('DunkAroos', 'Sweet', 20, 1, 1, 210, 170, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-tsWSD5ptUt4Q9LI7a_KFrUDoEhPeb8yfzLYzvIvdRk1aDlLK'),
 ('SkinnyPop Original Popcorn', 'Salty', 0, 2, 3, 75, 150, 'https://cdn.shopify.com/s/files/1/0454/7562/7170/products/skinnyoriginal_0.5oz_front.png?v=1638563720' ),
 ('Mangos', 'Sweet', 46, 3, 5, 3, 201, 'https://lh3.googleusercontent.com/0T0i0Y2SgRxyu3SbbMkLBDut_1cQdrfhRlLvRZCMz0CqFB_ngESar9KNqnVC001sftrPZK_ersfFj0DdNXSZHeoD5CaL-jLsdewEAUM');
+
+
+-- INSERT INTO reviews (snack_id, reviewer, content, rating)
