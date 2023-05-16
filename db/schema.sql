@@ -17,3 +17,15 @@ CREATE TABLE snacks (
 );
 
 -- (name, type, sugar, protein, fiber, calories, img)
+
+DROP TABLE IF EXISTS reviews;
+
+-- CREATE TABLE reviews (
+--     id SERIAL PRIMARY KEY,
+--     reviewer TEXT,
+--     content TEXT,
+--     rating NUMERIC,
+--     CHECK (rating >= 0 AND rating <= 5),
+--     snack_id INTEGER REFERENCES snacks (id)
+--     ON DELETE CASCADE
+-- )
